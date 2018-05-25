@@ -24,5 +24,6 @@ for face_location in face_locations:
 
     cv2.imshow("face", pil_image)
     cv2.waitKey()
+    cv2.destoyAllWindows()
 
     pil_image.show()
