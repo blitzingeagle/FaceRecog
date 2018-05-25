@@ -22,8 +22,8 @@ for face_location in face_locations:
     face_image = image[top:bottom, left:right]
     pil_image = Image.fromarray(face_image)
 
+    pil_image.show()
+
     cv2.imshow("face", pil_image)
     cv2.waitKey()
     cv2.destoyAllWindows()
-
-    pil_image.show()
