@@ -1,10 +1,10 @@
 from PIL import Image
 import face_recognition
 
-fakeNews = True
+cnn = True
 image = face_recognition.load_image_file("images/biden.jpg")
 
-if fakeNews:
+if cnn:
     face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
 else:
     face_locations = face_recognition.face_locations(image)
