@@ -1,6 +1,8 @@
 from PIL import Image
 import face_recognition
 
+import cv2
+
 fake_news = True
 image = face_recognition.load_image_file("images/biden.jpg")
 
@@ -19,5 +21,8 @@ for face_location in face_locations:
     # You can access the actual face itself like this:
     face_image = image[top:bottom, left:right]
     pil_image = Image.fromarray(face_image)
-    print(pil_image.shape)
+
+    cv2.imshow(pil_image)
+    cv2.waitKey()
+
     pil_image.show()
